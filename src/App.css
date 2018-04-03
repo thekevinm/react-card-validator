@@ -1,0 +1,96 @@
+body {
+	background-color: grey;
+}
+
+#imgSize {
+	width: 50px;
+	display: flex;
+	padding-left: 300px;
+	padding-bottom: 50px;
+}
+
+/*CARD STUFF*/
+.cardContainer {
+	border:2px solid black;
+	width: 400px;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin:auto;
+	margin-top: 20px;
+	background-color: silver;
+	align-items: center;
+	border-radius: 25px;
+}
+
+.numInput {
+	padding-bottom: 50px;
+}
+
+#cardNumInput {
+	height: 20px;
+	width: 200px;
+	border:none;
+	outline: none;
+	background-color: silver;
+	padding-left: 50px;
+	font-family: serif;
+	font-size: 15px;
+}
+
+#cardNumInput:hover {
+	cursor: default;
+}
+
+::placeholder {
+	color: black;
+}
+
+.nameInput {
+	display: flex;
+	justify-content: space-evenly;
+	width: 400px;
+	font-family: serif;
+	font-size: 15px;
+}
+
+#cardNameInput {
+	height: 20px;
+	width: 110px;
+	border:none;
+	outline: none;
+	background-color: silver;
+	font-family: serif;
+	font-size: 15px;
+}
+
+#cardNameInput:hover {
+	cursor: default;
+}
+
+/*REAL INPUT STUFF*/
+.inputContainer {
+	width: 400px;
+	height: 200px;
+	margin:auto;
+	display: flex;
+	align-items: center;
+	padding-left: 25px;
+}
+
+#cardRealInput {
+	width: 350px;
+	height: 25px;
+	border-radius:25px;
+	outline: none;
+	padding-left: 10px;
+	font-family: serif;
+}
+
+button {
+	margin-left:150px;
+	font-family: serif;
+}
+
+
