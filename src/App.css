@@ -9,6 +9,15 @@ body {
 	padding-bottom: 50px;
 }
 
+p {
+	display: flex;
+	align-items: center;
+}
+
+p:hover {
+	cursor: default;
+}
+
 /*CARD STUFF*/
 .cardContainer {
 	border:2px solid black;
@@ -63,6 +72,22 @@ body {
 	background-color: silver;
 	font-family: serif;
 	font-size: 15px;
+	padding-top: 13px;
+}
+
+#cardExpInput {
+	height: 20px;
+	width: 25px;
+	border:none;
+	outline: none;
+	background-color: silver;
+	font-family: serif;
+	font-size: 15px;
+	padding-top: 13px;
+}
+
+#cardExpInput:hover {
+	cursor: default;
 }
 
 #cardNameInput:hover {
