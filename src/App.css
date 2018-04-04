@@ -19,7 +19,7 @@ p:hover {
 }
 
 /*CARD STUFF*/
-.cardContainer {
+/*.cardContainer {
 	border:2px solid black;
 	width: 400px;
 	height: 200px;
@@ -31,7 +31,7 @@ p:hover {
 	background-color: silver;
 	align-items: center;
 	border-radius: 25px;
-}
+}*/
 
 .numInput {
 	padding-bottom: 50px;

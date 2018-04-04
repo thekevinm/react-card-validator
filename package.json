@@ -4,9 +4,11 @@
   "private": true,
   "dependencies": {
     "card-validator": "^4.3.0",
+    "glamor": "^2.20.40",
+    "glamorous": "^4.12.1",
     "jQuery": "^1.7.4",
     "jquery": "^3.3.1",
-    "react": "^16.3.0",
+    "react": "^16.3.1",
     "react-dom": "^16.3.0",
     "react-scripts": "1.1.3"
   },

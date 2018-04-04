@@ -1,6 +1,36 @@
 import React, { Component } from 'react'
 import './App.css'
 import valid from 'card-validator'
+import glamorous from 'glamorous'
+
+const BorderColor = glamorous.div(
+{
+  border:'2px solid black',
+  width: '400px',
+  height: '200px',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  margin:'auto',
+  marginTop: '20px',
+  backgroundColor: 'silver',
+  alignItems: 'center',
+  borderRadius: '25px'
+},
+(props) => ({
+  border: error(props.val)
+})
+)
+
+const error = (check) => {
+  if(check === false) {
+    return '2px solid red'
+  } else if (check === true){
+    return '2px solid green'
+  }
+}
+
+
 
 class App extends Component {
   state = {
@@ -9,7 +39,8 @@ class App extends Component {
     expMonth: '',
     expYear: '',
     cardType: '',
-    cardImg: ''
+    cardImg: '',
+    isValid: true
   }
 
   handleChange = (e) => {
@@ -28,7 +59,8 @@ class App extends Component {
     if (!numberValidation.isPotentiallyValid) {
   console.log("Invalid Number")
   this.setState({
-    cardType: ''
+    cardType: '',
+    isValid: false
   })
 }
 
@@ -119,6 +151,7 @@ else if (numberValidation.card) {
 
       <form onSubmit={this.handleSubmit}>
       <div className="cardContainer">
+      <BorderColor type={this.state.cardType} val={this.state.isValid} background-color="silver" className="card">
         <div className="cardImg">
         <img id="imgSize" src={this.state.cardImg} alt= '' />
         </div>
@@ -130,6 +163,7 @@ else if (numberValidation.card) {
           <p>valid thru</p><input value={this.state.expMonth} name="expMonth" id="cardExpInput" type="text" placeholder="&#9900;&#9900;" readOnly /><p>/</p>
             <input value={this.state.expYear} name="expYear" id="cardExpInput" type="text" placeholder="&#9900;&#9900;" readOnly />
         </div>
+        </BorderColor>
       </div>
 
       <div className="inputContainer">
