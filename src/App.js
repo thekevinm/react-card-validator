@@ -40,7 +40,7 @@ class App extends Component {
     expYear: '',
     cardType: '',
     cardImg: '',
-    isValid: true
+    isValid: ''
   }
 
   handleChange = (e) => {
@@ -67,7 +67,8 @@ class App extends Component {
 else if (numberValidation.card) {
   console.log(numberValidation.card.niceType);
   this.setState({
-    cardType: numberValidation.card.niceType
+    cardType: numberValidation.card.niceType,
+    isValid: true
   })
   if (this.state.cardType === 'Visa') {
     this.setState({
@@ -141,8 +142,12 @@ else if (numberValidation.card) {
 
   handleSubmit = (e) => {
     e.preventDefault()
-
+    if (this.state.isValid === true){
     console.log(this.state)
+  } else {
+    alert("Fix Errors please:)"),
+    window.location.reload()
+  }
   }
 
   render() {
