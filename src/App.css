@@ -42,7 +42,7 @@ p:hover {
 	width: 200px;
 	border:none;
 	outline: none;
-	background-color: silver;
+	background-color: transparent;
 	padding-left: 50px;
 	font-family: serif;
 	font-size: 15px;
@@ -69,7 +69,7 @@ p:hover {
 	width: 110px;
 	border:none;
 	outline: none;
-	background-color: silver;
+	background-color: transparent;
 	font-family: serif;
 	font-size: 15px;
 	padding-top: 13px;
@@ -80,7 +80,7 @@ p:hover {
 	width: 25px;
 	border:none;
 	outline: none;
-	background-color: silver;
+	background-color: transparent;
 	font-family: serif;
 	font-size: 15px;
 	padding-top: 13px;

@@ -40,7 +40,7 @@ class App extends Component {
     expYear: '',
     cardType: '',
     cardImg: '',
-    isValid: ''
+    isValid: false
   }
 
   handleChange = (e) => {
@@ -114,11 +114,15 @@ else if (numberValidation.card) {
 
     if(!monthValidation.isPotentiallyValid) {
       console.log("Invalid Month")
+      this.setState({
+        isValid: false
+      })
     }
     else if (monthValidation.card) {
       console.log("Valid Month")
       this.setState({
-        expMonth: target.value
+        expMonth: target.value,
+        isValid: true
       })
     }
   }
@@ -131,11 +135,15 @@ else if (numberValidation.card) {
 
     if (!yearValidation.isPotentiallyValid) {
       console.log('Invalid Year')
+      this.setState({
+        isValid: false
+      })
     }
     else if (yearValidation.card) {
       console.log('Valid Year')
       this.setState({
-        expYear: target.value
+        expYear: target.value,
+        isValid: true
       })
     }
   }
@@ -145,7 +153,7 @@ else if (numberValidation.card) {
     if (this.state.isValid === true){
     console.log(this.state)
   } else {
-    alert("Fix Errors please:)"),
+    alert("Fix Errors please :D")
     window.location.reload()
   }
   }
